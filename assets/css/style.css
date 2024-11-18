@@ -140,44 +140,76 @@ h6 {
   }
 }
 
-/* Header Top */
+/* Header Top Adjustments */
 #header.header-top {
-  height: 80px;
+  height: auto; /* Allow flexible height */
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.9);
+  padding: 10px 20px; /* Add padding around the content */
+  z-index: 1000;
 }
 
-#header.header-top .social-links,
-#header.header-top h2 {
-  display: none;
+#header.header-top h2,
+#header.header-top .social-links {
+  display: none; /* Hide these elements on non-home pages */
 }
 
 #header.header-top h1 {
-  margin-right: auto;
   font-size: 36px;
+  margin: 0; /* Remove extra margin */
+  padding: 5px 0; /* Add consistent padding */
+  line-height: 1.2; /* Ensure proper spacing */
+  text-align: center; /* Center-align the logo text */
+}
+
+#header.header-top img {
+  max-height: 50px; /* Scale logo appropriately */
+  height: auto;
+  margin: 0 auto; /* Center-align the logo */
+  display: block;
 }
 
 #header.header-top .container {
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center-align all items */
 }
 
 #header.header-top .navbar {
-  margin: 0;
+  margin-top: 10px; /* Add spacing between the logo and navbar */
+  width: 100%; /* Ensure the navbar spans the full width */
+  display: flex;
+  justify-content: center; /* Center-align navbar items */
+  padding: 0;
+}
+
+/* Ensure old mobile nav toggle button is completely hidden */
+.mobile-nav-toggle {
+  display: none !important; /* Forcefully hide the toggle button */
 }
 
 @media (max-width: 768px) {
   #header.header-top {
-    height: 60px;
+    height: auto; /* Allow dynamic height */
+    padding: 15px; /* Add more padding for better spacing */
   }
 
   #header.header-top h1 {
-    font-size: 26px;
+    font-size: 26px; /* Adjust logo font size for smaller screens */
+  }
+
+  #header.header-top img {
+    max-height: 40px; /* Scale logo appropriately */
+  }
+
+  #header.header-top .navbar {
+    margin-top: 10px; /* Maintain spacing between logo and navbar */
   }
 }
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
