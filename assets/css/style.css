@@ -194,7 +194,7 @@ h6 {
 @media (max-width: 768px) {
   #header.header-top {
     height: auto; /* Allow dynamic height */
-    padding: 15px; /* Add more padding for better spacing */
+    padding: 10px; /* Add more padding for better spacing */
   }
 
   #header.header-top h1 {
